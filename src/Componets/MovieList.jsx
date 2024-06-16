@@ -37,7 +37,7 @@ function MovieList({ genreId, index_ }) {
       />
       <div
         ref={elementRef}
-        className="flex overflow-x-auto scrollbar-none scroll-smooth"
+        className="flex overflow-x-auto scrollbar-none scroll-smooth md:gap-8 gap-3"
       >
         {movieList.map((item, index) => (
           <React.Fragment key={item.id}>
