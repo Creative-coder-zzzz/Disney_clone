@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import GlobalApi from "../services/GlobalApi";
+import GlobalApi from "./services/GlobalApi";
 import MovieCard from "./MovieCard";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 import HrMovieCard from "./HrMovieCard";
@@ -14,7 +14,7 @@ function MovieList({ genreId, index_ }) {
 
   const getMovieByGenreId = () => {
     GlobalApi.getMovieByGenreId(genreId).then((resp) => {
-      console.log("Fetched movies:", resp.data.results); // Add this line
+      console.log("Fetched movies:", resp.data.results);
       setMovieList(resp.data.results);
     });
   };
