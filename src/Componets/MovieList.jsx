@@ -14,7 +14,7 @@ function MovieList({ genreId, index_ }) {
 
   const getMovieByGenreId = () => {
     GlobalApi.getMovieByGenreId(genreId).then((resp) => {
-      console.log("Fetched movies:", resp.data.results); // Add this line
+      console.log("Fetched movies:", resp.data.results);
       setMovieList(resp.data.results);
     });
   };
